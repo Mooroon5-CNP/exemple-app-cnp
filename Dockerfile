@@ -1,2 +1,9 @@
-FROM nginx:1.25-alpine
-COPY src/ /usr/share/nginx/html
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --omit=dev
+COPY src/ ./src/
+RUN adduser -D appuser
+USER appuser
+EXPOSE 8080
+CMD ["node", "src/index.js"]
