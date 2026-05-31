@@ -1,0 +1,7 @@
+include:
+  - project: 'nazim.lameche/ci-templates'
+    ref: main
+    file: 'pipeline.yml'
+    inputs:
+      app_name: "exemple-app-cnp"
+      config_repo_url: "https://gitlab.cri.epita.fr/nazim.lameche/config-repo.git"
