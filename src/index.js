@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 
 module.exports = app;
 
-// Only start the server when run directly (not when imported by tests)
+//  Only start the server when run directly (not when imported by tests)
 if (require.main === module) {
   const server = app.listen(PORT, () => {
     logger.info('server started', { port: PORT });
