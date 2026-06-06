@@ -8,6 +8,10 @@ on:
   push:
     branches: [main, prod]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   pipeline:
     uses: Mooroon5-CNP/ci-templates/.github/workflows/pipeline.yml@main
