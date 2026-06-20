@@ -18,7 +18,7 @@ jobs:
     with:
       app_name: "exemple-app-cnp"
       app_port: "8080"
-      target_cloud: aws
+      target_cloud: gcp
       config_repo_url: "https://github.com/Mooroon5-CNP/config-repo"
     secrets:
       CONFIG_REPO_TOKEN: ${{ secrets.CONFIG_REPO_TOKEN }}
